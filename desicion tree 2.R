@@ -3,7 +3,7 @@ library(party)
 # clear console
 cat("\014")
 
-titanic = read.csv('D:\\Kampus\\big data titanic\\titanic.csv')
+titanic = read.csv('D:\\Kampus\\Tugas Besar Big Data Semester 7\\big data titanic\\titanic.csv')
 titanic$Survived = factor(titanic$Survived, labels=c("died", "survived"))
 titanic$Embarked = factor(titanic$Embarked, labels=c("unkown", "Cherbourg", "Queenstown", "Southampton"))
 

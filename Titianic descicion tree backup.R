@@ -7,6 +7,12 @@ titanic = read.csv('D:\\Kampus\\big data titanic\\titanic.csv')
 titanic$Survived = factor(titanic$Survived, labels=c("died", "survived"))
 titanic$Embarked = factor(titanic$Embarked, labels=c("unkown", "Cherbourg", "Queenstown", "Southampton"))
 
+male = titanic[titanic$Sex=="male",]
+female = titanic[titanic$Sex=="female",]
+par(mfrow = c(1, 2), mar = c(0, 0, 2, 0), oma = c(0, 1, 0, 1))
+pie(table(male$Survived),labels=c("Dead","Survived"), main="Survival Portion Among Men")
+pie(table(female$Survived),labels=c("Dead","Survived"), main="Survival Portion Among Women")
+
 # Preprocessing ================================================================
 # mengatasi missing value dengan mean value
 for(i in 1:ncol(titanic)){
